@@ -1,52 +1,52 @@
 const USERS = [
   {
-    _id: 0,
-    name: 'Vasyl',
+    firstName: 'Vasyl',
+    lastName: 'Kharchenko',
     grades: [5, 4, 5, 10]
   },
   {
-    _id: 0,
-    name: 'Dmytro',
+    firstName: 'Dmytro',
+    lastName: 'Gorstka',
     grades: [5, 3, 5, 10]
   },
   {
-    _id: 0,
-    name: 'Max',
+    firstName: 'Max',
+    lastName: 'Zmil',
     grades: [1, 2, 3, 10]
   },
   {
-    _id: 0,
-    name: 'Oleg',
+    firstName: 'Oleg',
+    lastName: 'Zmil',
     grades: [4, 5, 7, 9]
   },
   {
-    _id: 0,
-    name: 'Vlad',
+    firstName: 'Vlad',
+    lastName: 'Kytzyryk',
     grades: [10, 10, 10, 9]
   },
   {
-    _id: 0,
-    name: 'Chris',
+    firstName: 'Chris',
+    lastName: 'Ban',
     grades: [3, 3, 3, 4]
   },
   {
-    _id: 0,
-    name: 'Oksi',
+    firstName: 'Oksi',
+    lastName: 'Action',
     grades: [9, 9, 8, 7]
   },
   {
-    _id: 0,
-    name: 'Bob',
+    firstName: 'Bob',
+    lastName: 'Marley',
     grades: [5, 1, 3, 5]
   },
   {
-    _id: 0,
-    name: 'Marina',
+    firstName: 'Marina',
+    lastName: 'Grytsko',
     grades: [8, 9, 10, 10]
   },
   {
-    _id: 0,
-    name: 'Alla',
+    firstName: 'Alla',
+    lastName: 'Omelchenko',
     grades: [5, 5, 4, 5]
   }
 ];

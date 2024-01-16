@@ -27,7 +27,8 @@ app.get('/avg-grades', async (req, res) => {
     const result = parsed.map(u => {
       return {
         _id: u._id,
-        name: u.name,
+        firstName: u.firstName,
+        lastName: u.lastName,
         avg_grade: (u.grades.reduce((ac, cv) => ac + cv)) / u.grades.length
       }
     });

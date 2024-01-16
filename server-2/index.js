@@ -2,6 +2,8 @@ const express = require('express');
 const { uuid } = require('uuidv4');
 
 const { USERS } = require('./users');
+const db = require('./db');
+const { User } = require('./db/models/users');
 
 require('dotenv').config();
 
@@ -20,15 +22,21 @@ app.get('/health', (req, res) => {
   })
 });
 
-app.get('/users', (req, res) => {
-  // probably can substitute with file, later mongodb
-  res.send(USERS);
+app.get('/users', async (req, res) => {
+  try {
+    const users = await User.find({});
+
+    res.send(users);
+  } catch (err) {
+    console.log(err);
+
+    res.status(500).send('internal server error')
+  }
 });
 
 app.get('*', function(req, res){
   res.status(404).send('not found');
 });
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
-});
+db.connect()
+  .then(() => app.listen(PORT, () => console.log(`Server is listening on ${PORT}`)));
